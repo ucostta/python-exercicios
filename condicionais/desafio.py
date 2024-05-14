@@ -1,48 +1,30 @@
-# Função para calcular a tensão
-def calcular_tensao(resistencia, corrente):
-    return resistencia * corrente
+# Solicita ao usuário para inserir a resistência e a corrente
+resistencia = float(input("Digite o valor da resistência em ohms (Ω): "))
+corrente = float(input("Digite o valor da corrente em amperes (A): "))
 
-# Função para calcular a resistência
-def calcular_resistencia(tensao, corrente):
-    return tensao / corrente
+# Calcula a tensão usando a fórmula U = R * i
+tensao = resistencia * corrente
 
-# Função para calcular a corrente
-def calcular_corrente(tensao, resistencia):
-    return tensao / resistencia
+# Exibe o resultado da tensão
+print("A tensão é:", tensao, "volts (V)")
+print("A tensão é:", tensao, "volts (V)")
 
-# Função para mostrar o menu
-def menu():
-    print("calculadora de Grandezas Elétricas")
-    print("1. Tensão (em Volts)")
-    print("2. Resistência (em Ohms)")
-    print("3. Corrente (em Ampères)")
+# Solicita ao usuário para inserir a tensão e a corrente
+tensao = float(input("Digite o valor da tensão em volts (V): "))
+corrente = float(input("Digite o valor da corrente em amperes (A): "))
 
-# Função principal do programa
-def main():
-    menu()  # Chama a função para mostrar o menu
-    escolha = int(input("qual a grandeza deseja calcular? (1/2/3): "))  # Solicita a escolha do usuário
+# Calcula a tensão usando a fórmula U = R * i
+resistencia = tensao * corrente
 
-    if escolha == 1:
-        resistencia = float(input("digite o valor da resistência (em Ohms): "))
-        corrente = float(input("digite o valor da corrente (em Ampères): "))
-        resultado = calcular_tensao(resistencia, corrente)
-        print("a tensão é:", resultado, "Volts")
+# Exibe o resultado da tensão
+print("A resistencia é:", resistencia, "ohms (Ω)")
 
-    elif escolha == 2:
-        tensao = float(input("digite o valor da tensão (em Volts): "))
-        corrente = float(input("digite o valor da corrente (em Ampères): "))
-        resultado = calcular_resistencia(tensao, corrente)
-        print("a resistência é:", resultado, "Ohms")
+# Solicita ao usuário para inserir a resistência e a tensão
+resistencia = float(input("Digite o valor da resistência em ohms (Ω): "))
+tensao = float(input("Digite o valor da tensão em volts (V): "))
 
-    elif escolha == 3:
-        tensao = float(input("digite o valor da tensão (em volts): "))
-        resistencia = float(input("digite o valor da resistência (em ohms): "))
-        resultado = calcular_corrente(tensao, resistencia)
-        print("a corrente é:", resultado, "ampères")
+# Calcula a corrente usando a fórmula U = R * i
+corrente = resistencia * tensao
 
-    else:
-        print("escolha inválida. por favor, escolha 1, 2 ou 3.")
-
-# Chama a função principal do programa se este arquivo for executado diretamente
-if _name_ == "_main_":
-    main()
+# Exibe o resultado da corrente
+print("A corrente é:", corrente, "amperes (A)")
